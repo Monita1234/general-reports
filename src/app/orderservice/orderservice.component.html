@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Ordenes de servicio</h4>
+                        <p class="category">lista de ordenes</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table *ngIf="tableData" class="table">
+                            <thead class="text-primary">
+                          <tr>
+                            <th *ngFor="let header of tableData.headerRow">{{ header }}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let row of tableData.dataRows">
+                            <td *ngFor="let cell of row">{{ cell }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
